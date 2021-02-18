@@ -14,6 +14,11 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-yellow">
+  <a class="navbar-brand" href="#"><h1>CCITY</h1></a>
+  <%= link_to "New cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</nav>
+
     <%= yield %>
   </body>
 </html>
