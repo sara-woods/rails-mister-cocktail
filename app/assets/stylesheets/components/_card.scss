@@ -8,9 +8,9 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   // border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
@@ -32,21 +32,27 @@
   img  {
     width: 300px;
     height: 400px;
+    text-align: center;
+    margin: 8px 16px;
   }
 }
 
 .cocktail-card {
-  background-color: $green;
+  background-color: $pink;
   width:  350px;
   height:  100%;
   padding: 26px;
   padding-right: 36px;
-  margin: 0 36px;
+  margin: 8px 16px;
   h1 {
     margin-bottom: 36px;
   }
   h3 {
     margin-bottom: 16px;
+  }
+  a {
+    color: white;
+    font-size: 16px;
   }
 }
 
@@ -61,6 +67,12 @@
   // font-size: 50px;
 }
 
+ul  {
+  list-style: none;
+  padding: 0;
+}
+
+
 
 
 // Smallest device
@@ -68,6 +80,18 @@
   .cards {
     grid-template-columns: 1fr;
   }
+  .cocktail-container {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .container  {
+    width: 500px;
+    margin: 0 auto;
+    padding:  0;
+  }
+  
 }
 
 // Small devices (landscape phones, 576px and up)
