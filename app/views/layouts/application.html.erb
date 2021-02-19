@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Cocktail Club</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,9 +15,11 @@
 
   <body>
   <nav class="navbar navbar-light bg-yellow">
-  <a class="navbar-brand" href="#"><h1>CCITY</h1></a>
-  <%= link_to "New cocktail", new_cocktail_path, class: "btn btn-primary" %>
-</nav>
+    <%= link_to cocktails_path do  %>
+      <h1 class="logo">Cocktail Club</h1>
+    <% end %>
+    <%= link_to "New cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  </nav>
 
     <%= yield %>
   </body>

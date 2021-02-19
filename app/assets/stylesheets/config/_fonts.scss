@@ -1,6 +1,8 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;900&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oi&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 // Define fonts for body and headers
 // $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -17,6 +19,8 @@
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+// font-family: 'Anton', sans-serif;
+// font-family: 'Oi', cursive;
 
 $body-font: "Montserrat", "sans-serif";
-$headers-font: "Maven Pro", "sans-serif";
+$headers-font: 'Poppins', sans-serif;

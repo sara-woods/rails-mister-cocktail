@@ -7,18 +7,29 @@
   background-size: cover;
   // background-position: center;
   position: relative;
-  h1 {
+  h3 {
     position: absolute;
-    left: 25%;
+    left: 20%;
     top: -20px;
     background-color: $pink;
     padding: 36px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
+    border-radius:  $border-radius;
+    margin-bottom: 36px;
   }
 }
 
 a:hover {
   text-decoration: none;
   color: $blue;
+}
+
+.body {
+  margin: 0;
+  padding:  0;
+}
+
+h3 {
+  margin:  0;
 }
