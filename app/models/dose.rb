@@ -5,6 +5,6 @@ class Dose < ApplicationRecord
   validates :description, presence: true
   validates :cocktail, presence: true
   validates :description, presence: true
-  validates :cocktail, uniqueness: { scope: :ingredient }
+  validates :ingredient, uniqueness: { scope: :cocktail, message: "can only be added once" }
   
 end

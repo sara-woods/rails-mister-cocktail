@@ -21,9 +21,10 @@
 #   Ingredient.create!(name: value)
 # end
 
-Ingredient.create!(name: "Mint leaves")
-Ingredient.create!(name: "Cointreau")
-Ingredient.create!(name: "Olive")
-Ingredient.create!(name: "Lemon peel")
-Ingredient.create!(name: "Orange peel")
+# Ingredient.create!(name: "Mint leaves")
+# Ingredient.create!(name: "Cointreau")
+# Ingredient.create!(name: "Olive")
+# Ingredient.create!(name: "Lemon peel")
+# Ingredient.create!(name: "Orange peel")
+Ingredient.create!(name: "Orange juice")
 
