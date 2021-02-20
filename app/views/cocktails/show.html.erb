@@ -22,11 +22,14 @@
         <% end %>
       </li>
       <% end %>
+      <button type="button" class="btn btn-primary dark-button" data-toggle="modal" data-target="#exampleModal">
+        Add ingredient
+      </button>
     </ul>
   </div>
 </div>
 
-
+<!-- Old add ingredient form without modal
 <div class="dose-form">
   <div class="header-card">
     <h3>Add ingredient</h3>
@@ -36,6 +39,35 @@
       <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
       <%= f.submit "Add",  class: "btn btn-primary" %>
     <% end %>
+  </div>
+</div>-->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Add ingredient</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="dose-form">
+          <%= simple_form_for [@cocktail, @dose] do |f| %>
+            <%= f.input :description, label: "Amount", placeholder: "e.g 1 oz" %>
+            <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
+            <%= f.submit "Add",  class: "btn btn-primary"%>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <% end %>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 
