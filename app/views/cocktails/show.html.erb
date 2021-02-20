@@ -22,7 +22,7 @@
         <% end %>
       </li>
       <% end %>
-      <button type="button" class="btn btn-primary dark-button" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" id="btn_add_ingredient" class="btn btn-primary dark-button" data-toggle="modal" data-target="#exampleModal">
         Add ingredient
       </button>
     </ul>
@@ -71,3 +71,7 @@
   </div>
 </div>
 
+
+<% if @form_submitted %>
+  <script>document.getElementById("btn_add_ingredient").click(); </script>
+<% end %>
