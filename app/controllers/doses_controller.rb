@@ -6,8 +6,10 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      @form_submitted = true
-      render 'cocktails/show'
+      respond_to do |format|
+        format.js { render 'cocktails/errordose.js.erb' }
+      end
+      #render 'cocktails/show'
     end
   end
 

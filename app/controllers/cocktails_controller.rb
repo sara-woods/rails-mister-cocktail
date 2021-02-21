@@ -1,5 +1,6 @@
 class CocktailsController < ApplicationController
   def index
+    @cocktail = Cocktail.new
     @cocktails = Cocktail.all
   end
 
@@ -14,10 +15,14 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail =  Cocktail.new(cocktail_params)
+    @cocktails = Cocktail.all
     if @cocktail.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktails_path(@cocktail)
     else
-      render :new
+      respond_to do |format|
+        format.js { render 'errorcocktail.js.erb' }
+      end
+      #render :index
     end
   end
 

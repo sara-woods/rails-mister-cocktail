@@ -1,16 +1,8 @@
-
 <div class = "dose-form">
   <div class="header-card">
     <h3>Add new cocktail</h3>
   </div>
-
-  <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :name, placeholder: "e.g Martini" %>    
-    <%= f.input :photo, as: :file %>
-    <%=  f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
-
-
+  <%= render 'formcocktail' %>
 </div>
 
 
