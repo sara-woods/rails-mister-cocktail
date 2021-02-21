@@ -1,6 +1,12 @@
-<%= simple_form_for [@cocktail, @dose], remote: true do |f| %>
-  <%= f.input :description, label: "Amount", placeholder: "e.g 1 oz" %>
-  <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
-  <%= f.submit "Add",  class: "btn btn-primary"%>
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-<% end %>
+<div class="dose-form">
+  <%= simple_form_for [@cocktail, @dose], remote: true do |f| %>
+    <%= f.input :description, label: "Amount", placeholder: "e.g 1 oz" %>
+    <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
+    
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <%= f.submit "Add",  class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,14 @@
-  <%= simple_form_for @cocktail, remote: true do |f| %>
-    <%= f.input :name, placeholder: "e.g Martini" %>    
-    <%= f.input :photo, as: :file %>
-    <%=  f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
+
+  <div class="dose-form">
+    <%= simple_form_for @cocktail, remote: true do |f| %>
+      <%= f.input :name, placeholder: "e.g Martini" %>    
+      <%= f.input :photo, as: :file %>
+
+  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <%=  f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+
